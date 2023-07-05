@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <button id="colorButton">Change Color</button>
+
+  <script>
+    var button = document.getElementById("colorButton");
+
+    function generateRandomColor() {
+      var red = (Math.random() * 256);
+      var green =(Math.random() * 256);
+      var blue = (Math.random() * 256);
+      return "rgb(" + red + ", " + green + ", " + blue + ")";
+    }
+
+    function changeColor() {
+      var randomColor = generateRandomColor();
+      document.body.style.backgroundColor = randomColor;
+    }
+
+    button.addEventListener("click", changeColor);
+  </script>
+</body>
+</html>
